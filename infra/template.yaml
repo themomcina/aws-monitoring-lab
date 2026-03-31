@@ -6,5 +6,4 @@ Resources:
     Type: AWS::Logs::LogGroup
     Properties:
       LogGroupName: /demo/app
-      RetentionInDays: 7 
-	  
+      RetentionInDays: 7  
