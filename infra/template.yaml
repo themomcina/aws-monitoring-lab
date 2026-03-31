@@ -115,7 +115,7 @@ Resources:
       ComparisonOperator: GreaterThanOrEqualToThreshold
       TreatMissingData: notBreaching
 
-    Dashboard:
+   Dashboard:
     Type: AWS::CloudWatch::Dashboard
     Properties:
       DashboardName: demo-dashboard
