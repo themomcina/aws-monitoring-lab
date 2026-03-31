@@ -92,6 +92,7 @@ Resources:
             -c file:/opt/aws/amazon-cloudwatch-agent/etc/amazon-cloudwatch-agent.json -s
 
           nohup /opt/demo/generate_logs.sh &
+
   ErrorMetricFilter:
     Type: AWS::Logs::MetricFilter
     Properties:
