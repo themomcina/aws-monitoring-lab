@@ -115,23 +115,29 @@ Resources:
       ComparisonOperator: GreaterThanOrEqualToThreshold
       TreatMissingData: notBreaching
 
-  Dashboard:
+    Dashboard:
     Type: AWS::CloudWatch::Dashboard
     Properties:
       DashboardName: demo-dashboard
-      DashboardBody: |
+      DashboardBody: !Sub |
         {
           "widgets": [
             {
               "type": "metric",
-              "x": 0, "y": 0, "width": 12, "height": 6,
+              "x": 0,
+              "y": 0,
+              "width": 12,
+              "height": 6,
               "properties": {
                 "title": "Error Count",
                 "metrics": [
                   [ "DemoApp", "ErrorCount" ]
                 ],
                 "period": 60,
-                "stat": "Sum"
+                "stat": "Sum",
+                "view": "timeSeries",
+                "stacked": false,
+                "region": "${AWS::Region}"
               }
             }
           ]
